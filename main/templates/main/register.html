@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Register User{% endblock title %}
+
+{% block content %}
+<div class="container bg-white shadow-md p-5 form-layout">
+    <h3>Create Account</h3>
+    <h5>Secure your account today!</h5>
+    <br>
+
+    <form method="post" autocomplete="off">
+        {% csrf_token %}
+
+        {{form}}
+        <button type="submit" class="btn btn-info btn-log w-100 btn-block p-3">Create Account</button>
+    </form>
+
+    <br><br>
+
+    <div class="text-center">
+        {% comment %} <p>Already have an account? </p> <a href="{% url '' %}">Login</a> {% endcomment %}
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+
+<nav>
+    <a href="{% url 'home' %}">
+        &nbsp; Home
+    </a>
+    <div>
+
+
+        <ul>
+            <li>
+                <a type="button" href="{% url 'register' %}">Register</a>
+            </li>
+            <li>
+
+                <a type="button" href="">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<body>
+    <br>
+    <br>
+    <div class="text-center">
+
+        <a class="btn btn-info" type="button" href="{% url 'register' %}"> <i class="fa fa-user" aria-hidden="true"></i>
+            &nbsp; Make an account </a>
+    </div>
+</body>
+{% endblock content %}
